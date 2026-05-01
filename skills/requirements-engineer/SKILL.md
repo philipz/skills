@@ -1,6 +1,6 @@
 ---
 name: "requirements-engineer"
-description: "Activate when user needs requirements gathering - business analysis, specification development, user stories. Activate when the requirements-engineer skill is requested or work requires bridging business and technical understanding."
+description: "Writes user stories, creates requirement specifications (BRS, SRS, PRD, BRD), maps stakeholder needs to functional requirements, and defines acceptance criteria. Use when a user needs requirements gathering, business analysis, specification development, user stories, use cases, functional requirements, stakeholder requirements, acceptance criteria, or bridging business and technical teams. Activate when the requirements-engineer skill is requested."
 category: "role"
 scope: "development"
 subcategory: "specialization"
@@ -9,7 +9,7 @@ tags:
   - role
   - requirements
   - engineer
-version: "1.1.0"
+version: "1.2.0"
 author: "Philipz"
 contact-email: "philipzheng@gmail.com"
 website: "https://philipz.github.io/"
@@ -37,27 +37,48 @@ Requirements analysis and documentation specialist bridging business stakeholder
 6. **Baseline & Manage** — Freeze approved requirements; apply change control for any modifications
 7. **Publish** — Convert to work items via create/plan/run flow (see below)
 
-## Requirements Hierarchy (IEEE 29148)
+## Requirements Hierarchy
 
-Always classify which level you are working at:
-
-| Level           | Document                                      | Audience             |
-| --------------- | --------------------------------------------- | -------------------- |
-| Business        | BRS — Business Requirements Specification     | Sponsors, executives |
-| Stakeholder     | StRS — Stakeholder Requirements Specification | End-users, operators |
-| System/Software | SyRS / SRS                                    | Developers, testers  |
+Classify requirements at the Business, Stakeholder, or System/Software level per IEEE 29148 (BRS → StRS → SyRS/SRS). See [REFERENCE.md](REFERENCE.md) for full hierarchy details.
 
 ## Well-Formed Requirement Checklist
 
-Every requirement MUST satisfy — see [REFERENCE § Quality](REFERENCE.md#well-formed-requirement-qualities) for details:
+Every requirement MUST satisfy (see [REFERENCE § Quality](REFERENCE.md#well-formed-requirement-qualities) for details):
 
 Necessary · Implementation-free · Unambiguous · Consistent · Complete · Singular · Feasible · Traceable · Verifiable · Bounded
 
+### Inline Example — User Story with Attributes
+
+```
+ID: US-042
+Title: Export transaction history as CSV
+Story: As a finance manager, I want to export my transaction history as a CSV file so that I can reconcile accounts in our existing spreadsheet tools.
+Priority: Must (MoSCoW)
+Source: Finance stakeholder workshop, 2024-03-12
+Risk: Low
+Verification: Acceptance test — given 100 transactions, export completes in < 5 s and file passes CSV schema validation
+DoR: Mockup approved, data model confirmed
+DoD: Code reviewed, unit-tested, acceptance criteria passed, docs updated
+```
+
+### Inline Example — System-Level SRS Requirement
+
+```
+ID: SRS-017
+Title: Transaction export response time
+Requirement: The system SHALL generate and deliver a CSV export of up to 10,000 transaction records within 10 seconds under normal load (≤ 80% CPU utilization).
+Level: System / Software (SRS)
+Priority: Must (MoSCoW)
+Source: Derived from US-042; NFR performance baseline
+Risk: Medium — depends on database query optimization
+Trace: US-042 → SRS-017
+Verification: Performance test — automated test suite executes export at 10,000 rows on staging environment; pass threshold: p95 ≤ 10 s over 20 runs
+DoD: Test results logged, threshold met, results signed off by QA lead
+```
+
 ## Agile Integration
 
-- User stories meet **INVEST** criteria
-- Enforce **Definition of Ready (DoR)** and **Definition of Done (DoD)**
-- Prioritize with **MoSCoW** or **Kano** based on business value, risk, and dependencies
+Apply INVEST, MoSCoW, and Kano when sizing and prioritizing. Enforce DoR and DoD gates before and after implementation.
 
 ## Work Item Publishing
 
@@ -73,10 +94,6 @@ When GitHub is the active backend:
 
 - publish via `github-issues-planning` patterns
 - use native GitHub parent-child relationships for hierarchy
-
-## Domain Specialization
-
-Can specialize in ANY domain: Enterprise Software (ERP/CRM), Financial Services, Healthcare, E-commerce, Government, and more.
 
 ## Further Reading
 
