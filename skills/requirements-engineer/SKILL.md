@@ -1,18 +1,19 @@
 ---
 name: "requirements-engineer"
 description: "Writes user stories, creates requirement specifications (BRS, SRS, PRD, BRD), maps stakeholder needs to functional requirements, and defines acceptance criteria. Use when a user needs requirements gathering, business analysis, specification development, user stories, use cases, functional requirements, stakeholder requirements, acceptance criteria, or bridging business and technical teams. Activate when the requirements-engineer skill is requested."
-category: "role"
-scope: "development"
-subcategory: "specialization"
-tags:
-  - development
-  - role
-  - requirements
-  - engineer
-version: "1.2.0"
-author: "Philipz"
-contact-email: "philipzheng@gmail.com"
-website: "https://philipz.github.io/"
+metadata:
+  category: "role"
+  scope: "development"
+  subcategory: "specialization"
+  tags:
+    - development
+    - role
+    - requirements
+    - engineer
+  version: "1.2.0"
+  author: "Philipz"
+  contact-email: "philipzheng@gmail.com"
+  website: "https://philipz.github.io/"
 ---
 
 # Requirements Engineer Role
@@ -43,9 +44,11 @@ Classify requirements at the Business, Stakeholder, or System/Software level per
 
 ## Well-Formed Requirement Checklist
 
-Every requirement MUST satisfy (see [REFERENCE § Quality](REFERENCE.md#well-formed-requirement-qualities) for details):
+Every requirement MUST carry all attributes (ID, Title, Priority, Status, Source, Rationale, Risk, Verification Method — see [REFERENCE § Attributes](REFERENCE.md#requirement-attributes)) and satisfy these qualities (see [REFERENCE § Quality](REFERENCE.md#well-formed-requirement-qualities) for details):
 
 Necessary · Implementation-free · Unambiguous · Consistent · Complete · Singular · Feasible · Traceable · Verifiable · Bounded
+
+**Completeness check**: Before finalizing, verify EVERY requirement carries ALL attributes above. Partial attribute coverage is a common defect.
 
 ### Inline Example — User Story with Attributes
 
@@ -54,7 +57,9 @@ ID: US-042
 Title: Export transaction history as CSV
 Story: As a finance manager, I want to export my transaction history as a CSV file so that I can reconcile accounts in our existing spreadsheet tools.
 Priority: Must (MoSCoW)
+Status: Approved
 Source: Finance stakeholder workshop, 2024-03-12
+Rationale: Finance team spends 4h/week manually copying data; CSV export eliminates this waste
 Risk: Low
 Verification: Acceptance test — given 100 transactions, export completes in < 5 s and file passes CSV schema validation
 DoR: Mockup approved, data model confirmed
@@ -69,7 +74,9 @@ Title: Transaction export response time
 Requirement: The system SHALL generate and deliver a CSV export of up to 10,000 transaction records within 10 seconds under normal load (≤ 80% CPU utilization).
 Level: System / Software (SRS)
 Priority: Must (MoSCoW)
+Status: Approved
 Source: Derived from US-042; NFR performance baseline
+Rationale: Users expect sub-10s response for data export tasks; longer delays cause workflow abandonment
 Risk: Medium — depends on database query optimization
 Trace: US-042 → SRS-017
 Verification: Performance test — automated test suite executes export at 10,000 rows on staging environment; pass threshold: p95 ≤ 10 s over 20 runs
