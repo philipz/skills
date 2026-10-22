@@ -75,3 +75,25 @@ physical = those mechanisms constrained by technology.
 - **Levels of detail differ by column:** What = bill of materials, How = hierarchical,
   Where = geometric, Who = matrix, When = cyclical, Why = network. Only How decomposes
   hierarchically — avoid forcing other columns into trees.
+
+## Systems that contain autonomous agents
+
+A model, agent, or bot that **acts or decides** is an actor with authority, so it belongs
+in **C4 (Who)** next to the humans — not only in C2 (How) as a processing step or C1 (What)
+as a producer of decisions. An agent that may block a merge, approve a request, or spend
+money holds an authority, and authority is a Who fact.
+
+When an agent holds authority, record three things that interviews otherwise miss:
+
+1. **C4 — the authority boundary**, per agent: what it may decide alone, what it must
+   escalate to a human, and who may override it. "The agent decides X" is not a process
+   description; it is a division of work between actors.
+2. **C2/C6 — the non-determinism, stated explicitly.** Never write an agent's behaviour as
+   a deterministic function. Say what constrains it, what happens when it is wrong, and
+   give a measurable wrong-answer rate (e.g. false-block rate) as the acceptance target.
+   This is the cell most likely to be written as certain and then cost rework.
+3. **C6 — what the agent may never do**, as a structural rule, alongside the business rules
+   it enforces.
+
+**"The agent will work it out" is not an answer.** It is 「你決定就好」 with the model in the
+user's chair — a deferral, recorded as ⚠️, not a decision.

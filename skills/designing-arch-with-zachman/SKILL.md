@@ -128,8 +128,10 @@ Technology, Why/What/How/Who/Where/When) — translating the axis names changes 
 
 ## Files
 
-- `references/zachman-rules.md` — the two axes, the seven rules, and the consequences that
-  justify this skill's requirements. Use it to decide which cell an answer belongs to.
+- `references/zachman-rules.md` — the two axes, the seven rules, the consequences that
+  justify this skill's requirements, and where an autonomous agent belongs (C4, with its
+  authority boundary and its non-determinism stated). Use it to decide which cell an answer
+  belongs to.
 - `references/question-bank.md` — the 24 primary questions, follow-ups, and how to record
   each kind of answer.
 - `templates/architecture-doc.md` — the output template.
