@@ -1,0 +1,32 @@
+skills/requirements-engineer/evals/agile-user-stories-with-dor-dod-and-acce/task.md
+  h_1b119f25eaf333 1,3,5,7,9,11,13,15-16,18
+package-lock.json
+  h_1b119f25eaf333 2,8
+.claude-plugin/plugin.json
+  h_1b119f25eaf333 5
+skills/requirements-engineer/tile.json
+  h_1b119f25eaf333 1-11
+README.md
+  h_1b119f25eaf333 1,5,7,9,15,17,19,21,23-27,29,31,33-37
+skills/requirements-engineer/evals/requirements-hierarchy-and-document-stru/task.md
+  h_1b119f25eaf333 1-19
+skills/requirements-engineer/evals/requirements-hierarchy-and-document-stru/criteria.json
+  h_1b119f25eaf333 1-66
+package.json
+  h_1b119f25eaf333 2,5,8
+skills/requirements-engineer/evals/agile-user-stories-with-dor-dod-and-acce/criteria.json
+  h_1b119f25eaf333 1-61
+CONTEXT.md
+  h_1b119f25eaf333 1,3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3ccb147de2e914b041edba80384336389145d7bd",
+  "prompts": {},
+  "humans": {
+    "h_1b119f25eaf333": {
+      "author": "philipz <philipzheng@gmail.com>"
+    }
+  }
+}

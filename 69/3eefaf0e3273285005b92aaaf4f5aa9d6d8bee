@@ -1,0 +1,20 @@
+skills/designing-arch-with-zachman/SKILL.md
+  h_1b119f25eaf333 1-135
+skills/designing-arch-with-zachman/references/question-bank.md
+  h_1b119f25eaf333 1-77
+skills/designing-arch-with-zachman/references/zachman-rules.md
+  h_1b119f25eaf333 1-77
+skills/designing-arch-with-zachman/templates/architecture-doc.md
+  h_1b119f25eaf333 1-102
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "693eefaf0e3273285005b92aaaf4f5aa9d6d8bee",
+  "prompts": {},
+  "humans": {
+    "h_1b119f25eaf333": {
+      "author": "philipz <philipzheng@gmail.com>"
+    }
+  }
+}
