@@ -1,0 +1,61 @@
+{
+  "context": "Tests whether the agent writes user stories that follow the skill's Agile integration requirements: correct story format, Given-When-Then acceptance criteria, MoSCoW prioritization, INVEST-aligned stories, and DoR/DoD gate checklists. The agent should produce sprint-ready stories with all required metadata.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "As-a/I-want/So-that format",
+      "max_score": 12,
+      "description": "Every user story uses the three-part structure: 'As a [role], I want to [action], So that [benefit]' — all three parts present on each story"
+    },
+    {
+      "name": "Given-When-Then acceptance criteria",
+      "max_score": 12,
+      "description": "Each user story includes acceptance criteria written in Given-When-Then (Gherkin) format — at least one Given/When/Then block per story"
+    },
+    {
+      "name": "MoSCoW priority labels",
+      "max_score": 10,
+      "description": "Story priority is expressed using MoSCoW labels (Must/Should/Could/Won't) — not numeric scores, T-shirt sizes, or other frameworks"
+    },
+    {
+      "name": "Story ID assigned",
+      "max_score": 8,
+      "description": "Each user story has a unique, structured ID (e.g., US-001, STORY-001) — not just a title"
+    },
+    {
+      "name": "DoR checklist present",
+      "max_score": 10,
+      "description": "Each user story includes a Definition of Ready (DoR) checklist with at least 2 items (e.g., criteria clear, testable, estimated)"
+    },
+    {
+      "name": "DoD checklist present",
+      "max_score": 10,
+      "description": "Each user story includes a Definition of Done (DoD) checklist with at least 2 items (e.g., code complete, tests pass, reviewed)"
+    },
+    {
+      "name": "Risk attribute on stories",
+      "max_score": 8,
+      "description": "Each user story includes an explicit Risk attribute (High/Medium/Low)"
+    },
+    {
+      "name": "Dependencies listed",
+      "max_score": 8,
+      "description": "Each user story includes a Dependencies field (may be 'None' where applicable, but the field is present)"
+    },
+    {
+      "name": "Story Points / estimate included",
+      "max_score": 8,
+      "description": "Each user story includes a story point estimate or sizing estimate"
+    },
+    {
+      "name": "Backlog summary table",
+      "max_score": 7,
+      "description": "A backlog_summary.md file exists with a table listing at least Story ID, Title, and Priority for each story"
+    },
+    {
+      "name": "At least 5 stories",
+      "max_score": 7,
+      "description": "The user_stories.md file contains at least 5 distinct user stories"
+    }
+  ]
+}

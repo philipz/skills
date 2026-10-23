@@ -1,0 +1,66 @@
+{
+  "context": "Tests whether the agent produces a properly structured requirements specification following the IEEE 29148 hierarchy (BRS → SRS), assigns correct attributes to each requirement, and maintains traceability between levels. The agent should demonstrate awareness of both the document structure and the required metadata on each requirement.",
+  "type": "weighted_checklist",
+  "checklist": [
+    {
+      "name": "BRS sections present",
+      "max_score": 8,
+      "description": "The BRS document contains at minimum: Business Objectives, Scope (with explicit In Scope and Out of Scope), Stakeholders table, Business Requirements table, and Risks section"
+    },
+    {
+      "name": "SRS sections present",
+      "max_score": 8,
+      "description": "The SRS document contains at minimum: Functional Requirements table, at least one Non-Functional Requirements section (Performance or Security), and a Traceability Matrix section"
+    },
+    {
+      "name": "Requirement IDs structured",
+      "max_score": 8,
+      "description": "Requirement IDs use a hierarchical prefix pattern that distinguishes level and/or domain (e.g., BR-001, SyR-001, REQ-XXX-001) — not generic sequential numbers alone"
+    },
+    {
+      "name": "MoSCoW priority labels",
+      "max_score": 8,
+      "description": "Priority values in requirement tables use MoSCoW labels: Must, Should, Could, or Won't — not numeric scores, percentages, or other priority frameworks"
+    },
+    {
+      "name": "Verification method assigned",
+      "max_score": 8,
+      "description": "Each system-level requirement in the SRS has an assigned verification method from the set: Inspection, Analysis, Demonstration, or Test"
+    },
+    {
+      "name": "Status field present",
+      "max_score": 8,
+      "description": "Requirements include a Status field using the lifecycle stages: Draft, In Review, Approved, Implemented, or Verified"
+    },
+    {
+      "name": "Source attribute present",
+      "max_score": 8,
+      "description": "Each requirement includes a Source attribute indicating where the requirement originated (e.g., stakeholder interview, regulatory document, workshop)"
+    },
+    {
+      "name": "SHALL language for system reqs",
+      "max_score": 8,
+      "description": "System-level functional requirements use 'shall' language (e.g., 'The system shall...' or 'The system SHALL...')"
+    },
+    {
+      "name": "Traceability matrix present",
+      "max_score": 9,
+      "description": "A Requirements Traceability Matrix (RTM) exists that links system requirements back to business requirements (bidirectional traceability — at minimum forward links from System Req to Business Req)"
+    },
+    {
+      "name": "Risk attribute on requirements",
+      "max_score": 9,
+      "description": "Individual requirements include a Risk attribute (High/Medium/Low) indicating risk of non-implementation or poor implementation"
+    },
+    {
+      "name": "Rationale attribute present",
+      "max_score": 9,
+      "description": "Requirements include a Rationale field explaining why the requirement exists"
+    },
+    {
+      "name": "Three-level hierarchy",
+      "max_score": 9,
+      "description": "The output demonstrates all three requirement levels: Business (BRS/BR-xxx), and System (SyR/SRS) — with clear separation between the levels"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "philipz/skills",
+  "version": "1.2.0",
+  "summary": "requirement engineer for AI models.",
+  "private": false,
+  "skills": {
+    "requirements-engineer": {
+      "path": "SKILL.md"
+    }
+  }
+}
