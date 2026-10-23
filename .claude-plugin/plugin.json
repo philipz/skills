@@ -2,6 +2,7 @@
   "name": "philipz-skills",
   "skills": [
     "./skills/requirements-engineer",
-    "./skills/designing-arch-with-zachman"
+    "./skills/designing-arch-with-zachman",
+    "./skills/lean-formal-verification"
   ]
 }

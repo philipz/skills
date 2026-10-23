@@ -35,3 +35,14 @@ Design and document software system architecture using the **Zachman Framework**
   - Interview-driven architecture exploration covering Scope, Business, System, and Technology rows.
   - Prevent silent assumptions by explicitly tracking unfilled cells and risks.
   - Generate comprehensive architecture documentation grounded in enterprise architecture discipline.
+
+### 3. [lean-formal-verification](./skills/lean-formal-verification/SKILL.md)
+
+Formal verification workflow for program logic, business rules, algorithms, and state machines using **Lean 4**, implementing Carl M. Kadie's 2026 nine rules ("Vibe Validation").
+
+- **Purpose**: Verify that code correctly implements owner-confirmed business rules without shortcutting proofs (`sorry`, unauthorized axioms, or false green builds).
+- **Key Capabilities**:
+  - Structured 8-phase verification workflow producing reviewable artifacts (`RULES.md`, `MODEL-MAP.md`, and machine-checked Lean proofs).
+  - Enforce strict verification gates and guardrails (`verify-lean.sh`) to detect `sorry`, axioms, and metric regressions.
+  - Model extraction and abstraction guidance across Java, TypeScript, Rust, and Python.
+
