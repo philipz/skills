@@ -1,0 +1,22 @@
+skills/requirements-engineer/evals/agile-user-stories-with-dor-dod-and-acce/criteria.json
+  h_1b119f25eaf333 1-61
+skills/requirements-engineer/evals/agile-user-stories-with-dor-dod-and-acce/task.md
+  h_1b119f25eaf333 1,3,5,7,9,11,13,15-16,18
+skills/requirements-engineer/evals/requirements-hierarchy-and-document-stru/criteria.json
+  h_1b119f25eaf333 1-66
+skills/requirements-engineer/evals/requirements-hierarchy-and-document-stru/task.md
+  h_1b119f25eaf333 1-19
+skills/requirements-engineer/tile.json
+  h_1b119f25eaf333 1-11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "317bb2175142e50297c491781857c2ad23d936eb",
+  "prompts": {},
+  "humans": {
+    "h_1b119f25eaf333": {
+      "author": "philipz <philipzheng@gmail.com>"
+    }
+  }
+}
